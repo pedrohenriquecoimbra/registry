@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: regorator
+Version: 0.1.1
+Summary: A Python Registry and Decorator System
+Author-email: Pedro Henrique Coimbra <pedro-henrique.herig-coimbra@inrae.fr>
+License: EUPL-1.2
+Project-URL: Homepage, https://github.com/pedrohenriquecoimbra/regorator
+Keywords: register,registry,decorator
+Classifier: License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Other/Nonlisted Topic

@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+core/__init__.py
+core/main.py
+regorator.egg-info/PKG-INFO
+regorator.egg-info/SOURCES.txt
+regorator.egg-info/dependency_links.txt
+regorator.egg-info/top_level.txt
