@@ -17,12 +17,14 @@ class regdict(dict):
             self.__name__ = __name__
 
 
-def register(name: str, registry, description: str = ""):
+def register(name: str, registry, description: str = "", **kwargs):
     """Decorator to register a function in a given registry."""
     def decorator(func):
         func._correction_name = name
         func._description = description or "No description provided"
         registry[name] = func
+        for key, value in kwargs.items():
+            setattr(func, key, value)
         return func
     return decorator
 
