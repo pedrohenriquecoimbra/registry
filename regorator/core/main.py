@@ -38,10 +38,10 @@ class Register:
         # Each instance gets its own registry
         self.registry = create_registry()
 
-    def register(cls, name: str, description: str = ""):
+    def register(cls, name: str, description: str = "", **kwargs):
         """Class method that wraps the register decorator for the class's registry."""
         def decorator(func):
-            return register(name, cls.registry, description)(func)
+            return register(name, cls.registry, description, **kwargs)(func)
         return decorator
 
     @property
