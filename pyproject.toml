@@ -35,9 +35,10 @@ classifiers = [
 Homepage = "https://github.com/pedrohenriquecoimbra/regorator"
 
 [tool.setuptools]
-packages = ["regorator", "regorator.core"]
-exclude-package-data = { "regorator" = ["deprecated*"] }
-include-package-data = true
+packages.find = { where = ["."], include = ["regorator*"], exclude = ["sample*", "deprecated*"], namespaces = false }
+# packages = ["regorator", "regorator.core"]
+# exclude-package-data = { "regorator" = ["deprecated*"] }
+# include-package-data = true
 
 [tool.setuptools.dynamic]
 version = { attr = "regorator.version.__version__" }
