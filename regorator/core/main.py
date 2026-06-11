@@ -67,9 +67,14 @@ class Register:
 
     # @classmethod
     def add_method(self, name, how=None):
-        """Decorator to add a method dynamically to a class."""
+        """Decorator that binds ``func`` to this instance as attribute ``name``.
+
+        The decorated function is returned unchanged, so the name it was defined
+        under keeps referring to the function itself (rather than, as a side
+        effect, to this ``Register`` instance).
+        """
         def decorator(func):
-            # Dynamically add the function to the class
+            # Dynamically attach the function to this instance.
             if how == 'classmethod':
                 method = classmethod(func)
             elif how == 'static':
@@ -77,7 +82,7 @@ class Register:
             else:
                 method = types.MethodType(func, self)
             setattr(self, name, method)
-            return self
+            return func
         return decorator
 
     def apply(self, data, **kwargs):
