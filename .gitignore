@@ -1,2 +1,6 @@
 .git
-dist*.egg-info
+.ssh
+__pycache__
+dist/*
+*.egg-info/*
+**.pyc
